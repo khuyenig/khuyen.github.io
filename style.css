@@ -1,0 +1,240 @@
+/* =====================
+   Base & Global Styles
+===================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    background: #fdfdfd;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    min-height: 100vh;
+}
+
+/* =====================
+   Sidebar
+===================== */
+
+.sidebar {
+    width: 300px;
+    background: #ffffff;
+    border-right: 2px solid #eee;
+    padding: 40px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.img-border {
+    padding: 6px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffb9dd, #b5e8d5);
+    width: fit-content;
+    margin: 0 auto 15px;
+}
+
+.name { font-size: 22px; font-weight: 800; margin-top: 10px; }
+.tagline { font-size: 14px; color: #777; margin-bottom: 20px; }
+
+/* Social Icons */
+.social-icons a {
+    font-size: 20px;
+    margin: 0 8px;
+    color: #555;
+    transition: 0.3s;
+}
+.social-icons a:hover { color: #ff6fab; }
+
+/* Navigation Menu */
+.navigation ul { list-style: none; margin-top: 25px; }
+.navigation li { margin: 15px 0; }
+.navigation a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #444;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.navigation a:hover,
+.navigation a.active {
+    color: #ff6fab;
+}
+
+/* Connect Button */
+.btn-connect {
+    margin-top: 30px;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 8px;
+    background: #ff9ecf;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-connect:hover { background: #ff7fbc; }
+
+/* =====================
+   Main Content
+===================== */
+
+.main-content {
+    flex: 1;
+    padding: 50px 70px;
+}
+
+/* Sections */
+.section { margin-bottom: 80px; }
+
+.section-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    position: relative;
+}
+.section-title::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #ff9ecf;
+    display: block;
+    margin-top: 6px;
+    border-radius: 3px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+.card:hover { transform: translateY(-4px); }
+
+/* About Card */
+.about-card p { margin-bottom: 12px; line-height: 1.6; }
+.highlight { color: #ff6fab; font-weight: 700; }
+
+/* Education */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.edu-card .sub-text { color: #666; font-size: 14px; margin-bottom: 4px; }
+.time-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #ffeaf6;
+    font-size: 13px;
+    border-radius: 14px;
+    color: #d95fa2;
+    margin-top: 6px;
+}
+
+/* Icon Box */
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background: #ff9ecf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    color: white;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+/* Flex Row inside Education Card */
+.edu-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Projects */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.project-card .role { font-weight: 700; margin-bottom: 6px; font-size: 15px; color: #333; }
+
+.project-card .desc { font-size: 14px; margin-bottom: 10px; line-height: 1.5; color: #555; }
+
+.tags span {
+    background: #f7f7f7;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-right: 6px;
+    color: #444;
+}
+
+/* Soft pastel variations */
+.pastel-pink { background: #ffe7f3; }
+.pastel-mint { background: #def7ee; }
+.pastel-purple { background: #eee2ff; }
+.pastel-yellow { background: #fff6d1; }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0 10px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* =====================
+   Responsive Design
+===================== */
+
+@media (max-width: 950px) {
+    .sidebar {
+        width: 230px;
+        padding: 30px 15px;
+    }
+    .main-content { padding: 40px; }
+}
+
+@media (max-width: 780px) {
+    .container { flex-direction: column; }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 2px solid #eee;
+    }
+    .main-content { padding: 30px; }
+}
